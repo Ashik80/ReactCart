@@ -1,0 +1,30 @@
+.cart-count {
+  padding: 3px 9px;
+  border: 1px solid #ccc;
+}
+
+.increase,
+.decrease {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 3px 9px;
+  cursor: pointer;
+}
+
+.increase {
+  border-left: none;
+}
+
+.decrease {
+  border-right: none;
+}
+
+.increase:focus,
+.decrease:focus {
+  outline: none;
+}
+
+.increase:active,
+.decrease:active {
+  background-color: #ccc;
+}

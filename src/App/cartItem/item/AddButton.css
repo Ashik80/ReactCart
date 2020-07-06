@@ -1,0 +1,21 @@
+.add-button {
+    border: 1px solid orange;
+    border-radius: 3px;
+    padding: 3px 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    border: 2px solid orange;
+}
+
+.add-button:active {
+    background-color: #ed8400;
+    color: #fff;
+    outline: none;
+}
+
+.add-button:focus {
+    outline: none;
+}

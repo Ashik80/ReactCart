@@ -1,0 +1,35 @@
+.img-container {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.item {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.item-price-btn {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-price {
+    color: gray;
+    font-size: 15px;
+}

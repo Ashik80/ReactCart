@@ -9,6 +9,9 @@
 .cart-nav {
     padding: 10px;
     border-bottom: 1px solid #508fca;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-item {
@@ -20,3 +23,15 @@
 .nav-item.active {
     border-bottom: 2px solid orange;
 }
+
+.cart-icon {
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;
+}
+
+.cart-icon > i {
+    margin-right: 4px;
+    font-size: 12px;
+}
+

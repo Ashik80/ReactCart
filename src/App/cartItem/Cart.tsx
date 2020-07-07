@@ -10,10 +10,6 @@ const Cart = () => {
     const [tabIndex, setTabIndex] = useState(1)
     const [cartItems, setCartItems] = useState<ICartItem[]>([])
 
-    const handleTab = () => {
-        tabIndex === 1 ? setTabIndex(2) : setTabIndex(1)
-    }
-
     const handleQuantity = (e: SyntheticEvent<HTMLButtonElement>) => {
         const { id, name } = e.currentTarget
         let cartItem = cartItems.filter(item => item.id === parseInt(id))[0]
@@ -40,8 +36,12 @@ const Cart = () => {
     const handleCart = (id: number) => {
         let item = items.filter(item => item.id === id)[0]
         let cartItem = cartItems.filter(cart => cart.id === id)[0]
+        let cart = cartItems.slice()
+        let index = cartItems.indexOf(cartItem)
         if (cartItem) {
-            cartItem.quantity++
+            cart[index].quantity++
+            cart[index].price = cart[index].price + item.price
+            setCartItems(cart)
         }
         else {
             let newCartItem = { ...item, quantity: 1 }
@@ -51,7 +51,7 @@ const Cart = () => {
 
     return (
         <div className='cart'>
-            <Nav setTabIndex={handleTab} tabIndex={tabIndex} />
+            <Nav setTabIndex={setTabIndex} tabIndex={tabIndex} cartItems={cartItems} />
             {tabIndex === 1 ? <ItemPage items={items} addToCart={handleCart} />
                 : <CartPage items={cartItems} handleQuantity={handleQuantity} />}
         </div>

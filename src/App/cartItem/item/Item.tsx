@@ -23,7 +23,7 @@ const Item: React.FC<IProps> = ({ item, button }) => {
             </div>
             <div className='item-price-btn'>
                 <div className='item-price'>
-                    ${item.price}
+                    ${item.price.toFixed(2)}
                 </div>
                 <div className='button-container'>
                     {button}
